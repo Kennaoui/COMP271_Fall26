@@ -25,7 +25,7 @@ Sakai remains the **authoritative source** for the syllabus, graded assignments,
 ## How to use this repo
 
 ```bash
-git clone https://github.com/<org-or-username>/<repo-name>.git
+git clone https://github.com/<username>/<repo-name>.git
 cd <repo-name>
 ```
 
