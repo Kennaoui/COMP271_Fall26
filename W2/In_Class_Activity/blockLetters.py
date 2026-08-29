@@ -56,4 +56,4 @@ def sanity_check(letters):
 
 
 # Catch malformed letter data before the activity begins.
-assert sanity_check(MISSISSIPPI)
+assert sanity_check([M, I, S, P])
