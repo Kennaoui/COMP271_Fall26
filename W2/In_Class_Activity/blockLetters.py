@@ -55,7 +55,5 @@ def sanity_check(letters):
     return True
 
 
-MISSISSIPPI = [M, I, S, S, I, S, S, I, P, P, I]
-
 # Catch malformed letter data before the activity begins.
 assert sanity_check(MISSISSIPPI)
