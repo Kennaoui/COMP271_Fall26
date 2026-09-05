@@ -3,7 +3,7 @@ def indices_of(list_to_search: list, item_to_find: str, find_all: bool) -> int |
     Return all matching indices when find_all is True. Else, return the first matching index or -1 if not found.
     """
     # Results will be stored in indices. The function will decide
-    # what to return at the end based on the value of all.
+    # what to return at the end based on the value of find_all.
     indices: list[int] = []
 
     # Iterate through the list.
