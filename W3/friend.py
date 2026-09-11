@@ -17,12 +17,12 @@ class Friend:
     myfriend = Friend("Joy", "Doe", "0000", "01/01/2000")
       
     # Accessing a field/attribute of the object
-    print(f"{myfriend.fir}'s phone number. We will update in the next.")
+    print(f"{myfriend.first_name}'s phone number. We will update in the next.")
       
     # Updating a field/attribute of the object
     myfriend.phone = "765 492 534"
 
     # Call an instance method
-    prin(myfriend.introduce)
+    print(myfriend.introduce())
       
 main()
