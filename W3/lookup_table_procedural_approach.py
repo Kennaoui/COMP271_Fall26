@@ -32,3 +32,6 @@ def indices_prefix(records, prefix):
             matches.append(i)              # remember the position, not the record
 
     return matches
+
+print("Any first name starts with 'L'? ->", contains_prefix(st_characters, "L"))
+print("Indices where first name starts with 'L' ->", indices_prefix(st_characters, "L"))
