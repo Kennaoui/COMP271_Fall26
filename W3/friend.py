@@ -13,7 +13,14 @@ class Friend:
         return f"Hi, I'm {self.first_name} {self.last_name}. You can reach me at {self.phone}."
 
   def main():
+    # Creating an instance/object
     myfriend = Friend("Joy", "Doe", "0000", "01/01/2000")
+      
+    # Accessing a field/attribute of the object
     print(f"{myfriend.fir}'s phone number. We will update in the next.")
+      
+    # Updating a field/attribute of the object
     myfriend.phone = "765 492 534"
+
+    # Call an instance method
     prin(myfriend.introduce)
