@@ -24,3 +24,5 @@ class Friend:
 
     # Call an instance method
     prin(myfriend.introduce)
+      
+main()
