@@ -1,4 +1,4 @@
-# COMP 271 Programming Assignment: Modular Integers and RSA
+# COMP 271 Assignment 3: Modular Integers and RSA
 
 ## Overview
 
