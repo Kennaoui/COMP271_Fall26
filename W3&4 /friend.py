@@ -83,6 +83,8 @@ class Friend:
         """Return a general description of the relationship."""
         return "This person is my friend."
 
+    def __secret(self) -> str:
+        return "My friend's secret is ..."
 def main():
     # Creating an instance/object
     mySchoolFriend = Friend("Joy", "Doe", "123 475 698",  date(2000, 1, 31))
@@ -97,6 +99,9 @@ def main():
     print(mySchoolFriend.describe_relationship())
     print(myWorkFriend.introduce())
     print(myWorkFriend.describe_relationship())
+
+    #Uncomment this if you want to try accessing a private method
+    #print(mySchoolFriend.__secret())
 
     #Using ternary expression, we compare both friends. 
     #mySchoolFriend == myWorkFriend calls __eq__
