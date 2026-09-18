@@ -90,13 +90,13 @@ class Friend:
         return "My friend's secret is ..."
     
     @classmethod
-    def increment_friends_number(i : int):
+    def increment_friends_number(cls, i : int):
         friends_number += i
     
     @classmethod
-    def create_friend_by_email(email : str): 
+    def create_friend_by_email(cls, email : str): 
         lname = email.split('@')[0]
-        return Friend(lname, '', '', '')
+        return cls(lname, '', '', None) # 
         
 
 
