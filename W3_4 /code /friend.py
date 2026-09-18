@@ -96,7 +96,8 @@ class Friend:
     @classmethod
     def create_friend_by_email(cls, email : str): 
         lname = email.split('@')[0]
-        return cls(lname, '', '', None) # 
+        return cls(lname, '', '', None) 
+        # or return Friend(lname, '', '', None) 
         
 
 
