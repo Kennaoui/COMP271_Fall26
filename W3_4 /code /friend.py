@@ -3,12 +3,15 @@ from datetime import date
 class Friend:
     """Represents one contact in an address book."""
 
+    friends_number = 0
+
     def __init__(self, first_name: str, last_name: str, phone: str, dob: date) -> None:
         # Each parameter becomes an attribute: this is the object's state
         self.__first_name : str = first_name
         self.__last_name : str = last_name
         self.__phone : str = phone
         self.__dob : date = dob
+        friends_number += 1
 
     @property
     def fname(self):
@@ -85,10 +88,31 @@ class Friend:
 
     def __secret(self) -> str:
         return "My friend's secret is ..."
+    
+    @classmethod
+    def increment_friends_number(i : int):
+        friends_number += i
+    
+    @classmethod
+    def create_friend_by_email(email : str): 
+        lname = email.split('@')[0]
+        return Friend(lname, '', '', '')
+        
+
+
+
+
+
+
 def main():
+
+    print("number of friends I have:", Friend.friends_number)
+    Friend.increment_friends_number(3)
     # Creating an instance/object
     mySchoolFriend = Friend("Joy", "Doe", "123 475 698",  date(2000, 1, 31))
     myWorkFriend = Friend("Joy", "Doe", " ",  date(2009, 4, 1))
+    myBFF = Friend.create_friend_by_email("ennaoui@...")
+    print("number of friends I have:", Friend.friends_number)
 
     #Call and modify a property
     print(mySchoolFriend.fname)
