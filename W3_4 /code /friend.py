@@ -11,7 +11,7 @@ class Friend:
         self.__last_name : str = last_name
         self.__phone : str = phone
         self.__dob : date = dob
-        friends_number += 1
+        Friend.friends_number += 1
 
     @property
     def fname(self):
@@ -38,14 +38,14 @@ class Friend:
             self.__last_name = name
     
     def __str__(self) -> str:
-        """String representation of a friend object""""
+        """String representation of a friend object"""
         return self.__first_name + ', '+ self.__last_name
     def __repr__(self) -> str:
         """ Delegated to __str__"""
         return self.__str__()
     
     def __eq__(self, other) -> bool: 
-         """Two friends are equal if they share the same name and dob."""
+        """Two friends are equal if they share the same name and dob."""
         result = False
         if self.__first_name == other.__first_name and self.__last_name == other.__last_name and self.__dob == other.__dob:
             result = True
@@ -53,14 +53,14 @@ class Friend:
     
     def __lt__(self, other: "Friend") -> bool:
         """Compare friends by last name, then by first name."""
-        if self.last_name < other.last_name:
+        if self.lname < other.lname:
             return True
-        elif self.last_name == other.last_name:
-            return self.first_name < other.first_name
+        elif self.lname == other.lname:
+            return self.fname < other.fname
         else:
             return False
         # More Pythonic version:
-        # return (self.last_name, self.first_name) < (other.last_name, other.first_name)
+        # return (self.lname, self.fname) < (other.lname, other.fname)
         #
         # This works because the tuple class defines __lt__ to compare its
         # elements in order: first the last names, then the first names
@@ -70,9 +70,9 @@ class Friend:
     def __len__(self) -> int:
         """Return the friend's age in complete years."""
         today = date.today()
-        age = today.year - self.dob.year
+        age = today.year - self.__dob.year
 
-        if (today.month, today.day) < (self.dob.month, self.dob.day):
+        if (today.month, today.day) < (self.__dob.month, self.__dob.day):
             age = age - 1
 
         return age
@@ -91,7 +91,7 @@ class Friend:
     
     @classmethod
     def increment_friends_number(cls, i : int):
-        friends_number += i
+        cls.friends_number += i
     
     @classmethod
     def create_friend_by_email(cls, email : str): 
@@ -117,7 +117,7 @@ def main():
 
     #Call and modify a property
     print(mySchoolFriend.fname)
-    mySchoolFriend = "Joel"
+    mySchoolFriend.fname = "Joel"
 
     #Calling INSTANCE methods
     print(mySchoolFriend.introduce())
@@ -140,7 +140,7 @@ def main():
         print(myWorkFriend, "appears in my contacts book before", mySchoolFriend)
     
     #This one calls __len__ to calculate the age of mySchoolFriend
-    print(mySchoolFriend, "is", len(mySchoolFriend) years old)
+    print(mySchoolFriend, "is", len(mySchoolFriend), "years old")
 
     
       
