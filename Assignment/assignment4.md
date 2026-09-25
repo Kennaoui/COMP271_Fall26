@@ -12,6 +12,8 @@ You will build the notification objects and their factory. **No prior knowledge 
 
 **Allowed imports:** `abc` and `inspect` only. No other imports are permitted for this assignment.
 
+Follow the Programmer’s Pact. As an exception, you may use more than one return statement when necessary.
+
 ## Learning goals
 
 - Use an abstract base class to specify a common operation and share state and behavior.
