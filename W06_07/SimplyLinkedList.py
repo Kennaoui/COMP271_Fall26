@@ -1,8 +1,3 @@
-"""Linked-list code from slides 15–21, with runnable station examples.
-
-Requires Python 3.10 or later. Run with: python linked_lists.py
-"""
-
 from __future__ import annotations
 
 
