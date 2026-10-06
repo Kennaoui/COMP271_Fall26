@@ -26,7 +26,7 @@ class Node:
         self._next = node
 
 
-class LinkedList:
+class SimplyLinkedList:
     """A train line: Nodes chained from the head."""
 
     def __init__(self) -> None:
@@ -90,7 +90,7 @@ def main() -> None:
     print(howard.next.next.data)  # Morse
 
     print('\n3. Building a LinkedList')
-    red_line: LinkedList = LinkedList()
+    red_line: SimplyLinkedList = SimplyLinkedList()
     print(red_line.is_empty())  # True
     red_line.add_first('Loyola')
     red_line.add_first('Morse')
@@ -103,7 +103,7 @@ def main() -> None:
     print(red_line.is_empty())  # False
 
     print('\n4. Adding at the end of an empty list')
-    another_line: LinkedList = LinkedList()
+    another_line: SimplyLinkedList = SimplyLinkedList()
     another_line.add_last('Loyola')
     print(another_line)  # Loyola
 
