@@ -32,6 +32,8 @@ class SimplyLinkedList:
     def __init__(self) -> None:
         # The first station; None means an empty line.
         self._head: Node | None = None
+        # The number of stations in the line
+        self._size: int = 0
 
     def is_empty(self) -> bool:
         """Return True when the line has no stations."""
@@ -48,6 +50,10 @@ class SimplyLinkedList:
             # Move one station along.
             current = current.next
         return ' -> '.join(names)
+        
+    def __len__(self) -> int:
+        """Return the size of the line (number of stations)."""
+        return _size
 
     def add_first(self, data: str) -> None:
         """Insert data as the new first station."""
@@ -56,6 +62,7 @@ class SimplyLinkedList:
         new_node.next = self._head
         # The line now starts at the new station.
         self._head = new_node
+        self._size += 1 
 
     def add_last(self, data: str) -> None:
         """Append data as the new last station."""
@@ -70,6 +77,7 @@ class SimplyLinkedList:
                 current = current.next
             # Hook the new station on after it.
             current.next = new_node
+        self._size += 1 
 
 
 def main() -> None:
