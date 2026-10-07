@@ -79,6 +79,18 @@ class SimplyLinkedList:
             current.next = new_node
         self._size += 1 
 
+    def insert_after(self, new_val: str, after: str):
+        current = self._head
+        while current.next.data != after and current.next not None: 
+            current = current.next
+        if current.next not None:
+            current = current.next
+            new_node = Node(new_val, current.next)
+            current.next = new_node
+
+    def delete
+        
+
 
 def main() -> None:
     """Demonstrate node properties, manual links, and list operations."""
