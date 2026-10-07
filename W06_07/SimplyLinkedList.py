@@ -79,16 +79,15 @@ class SimplyLinkedList:
             current.next = new_node
         self._size += 1 
 
-    def insert_after(self, new_val: str, after: str):
+    def insert_after(self, new_val: str, after_val: str):
+        """Append new_val station after after_val station."""
         current = self._head
-        while current.next.data != after and current.next not None: 
+        while current.next.data != after_val and current.next not None: 
             current = current.next
-        if current.next not None:
-            current = current.next
+        current = current.next
+        if current not None:
             new_node = Node(new_val, current.next)
             current.next = new_node
-
-    def delete
         
 
 
