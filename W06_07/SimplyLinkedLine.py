@@ -1,14 +1,14 @@
 from __future__ import annotations
 
 
-class Node:
+class Station:
     """One station on the line."""
 
     def __init__(self, data: str) -> None:
-        # The station name this node carries.
+        # The station name this Station carries.
         self._data: str = data
         # The following station; None until it is linked.
-        self._next: Node | None = None
+        self._next: Station | None = None
 
     @property
     def data(self) -> str:
@@ -16,22 +16,22 @@ class Node:
         return self._data
 
     @property
-    def next(self) -> Node | None:
+    def next(self) -> Station | None:
         """Return the following station."""
         return self._next
 
     @next.setter
-    def next(self, node: Node | None) -> None:
-        """Link this station to node."""
-        self._next = node
+    def next(self, next_station: Station | None) -> None:
+        """Link this station to next_station."""
+        self._next = next_station
 
 
-class SimplyLinkedList:
-    """A train line: Nodes chained from the head."""
+class SimplyLinkedLine:
+    """A train line: Stations chained from the head."""
 
     def __init__(self) -> None:
         # The first station; None means an empty line.
-        self._head: Node | None = None
+        self._head: Station | None = None
         # The number of stations in the line
         self._size: int = 0
 
@@ -43,7 +43,7 @@ class SimplyLinkedList:
         """Return the stations in order, arrow-joined."""
         names: list[str] = []
         # Board at the head.
-        current: Node | None = self._head
+        current: Station | None = self._head
         # Ride until we fall off the end of the line.
         while current is not None:
             names.append(current.data)
@@ -53,11 +53,11 @@ class SimplyLinkedList:
         
     def __len__(self) -> int:
         """Return the size of the line (number of stations)."""
-        return _size
+        return self._size
 
     def add_first(self, data: str) -> None:
         """Insert data as the new first station."""
-        new_node: Node = Node(data)
+        new_node: Station = Station(data)
         # New station points at the old first station.
         new_node.next = self._head
         # The line now starts at the new station.
@@ -66,42 +66,46 @@ class SimplyLinkedList:
 
     def add_last(self, data: str) -> None:
         """Append data as the new last station."""
-        new_node: Node = Node(data)
+        new_node: Station = Station(data)
         if self.is_empty():
             # The new station is the whole line.
             self._head = new_node
         else:
             # Ride to the last station.
-            current: Node | None = self._head
+            current: Station | None = self._head
             while current.next is not None:
                 current = current.next
             # Hook the new station on after it.
             current.next = new_node
         self._size += 1 
 
-    def insert_after(self, new_val: str, after_val: str):
-        """Append new_val station after after_val station."""
+    def insert_after(self, new_val: str, after_val: str) -> None:
+        """Insert new_val after the first station named after_val."""
         current = self._head
-        while current.next.data != after_val and current.next not None: 
+    
+        while current is not None and current.data != after_val:
             current = current.next
-        current = current.next
-        if current not None:
-            new_node = Node(new_val, current.next)
+    
+        if current is not None:
+            new_node = Station(new_val)
+            new_node.next = current.next
             current.next = new_node
+            self._size += 1
+        
         
 
 
 def main() -> None:
     """Demonstrate node properties, manual links, and list operations."""
-    print('1. A single node')
-    loyola: Node = Node('Loyola')
+    print('1. A single station')
+    loyola: Station = Station('Loyola')
     print(loyola.data)  # Loyola
     print(loyola.next)  # None
 
     print('\n2. Linking nodes by hand')
-    howard: Node = Node('Howard')
-    jarvis: Node = Node('Jarvis')
-    morse: Node = Node('Morse')
+    howard: Station = Station('Howard')
+    jarvis: Station = Station('Jarvis')
+    morse: Station = Station('Morse')
     howard.next = jarvis
     jarvis.next = morse
     morse.next = loyola
@@ -109,7 +113,7 @@ def main() -> None:
     print(howard.next.next.data)  # Morse
 
     print('\n3. Building a LinkedList')
-    red_line: SimplyLinkedList = SimplyLinkedList()
+    red_line: SimplyLinkedLine = SimplyLinkedLine()
     print(red_line.is_empty())  # True
     red_line.add_first('Loyola')
     red_line.add_first('Morse')
@@ -122,7 +126,7 @@ def main() -> None:
     print(red_line.is_empty())  # False
 
     print('\n4. Adding at the end of an empty list')
-    another_line: SimplyLinkedList = SimplyLinkedList()
+    another_line: SimplyLinkedLine = SimplyLinkedLine()
     another_line.add_last('Loyola')
     print(another_line)  # Loyola
 
