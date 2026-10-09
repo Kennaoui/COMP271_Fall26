@@ -40,7 +40,6 @@ class DoublyLinkedLine(TrainLine):
 
     def __init__(self) -> None:
         self._head: DoublyStation | None = None
-        self._tail: DoublyStation | None = None
         self._size: int = 0
 
     def is_empty(self) -> bool:
@@ -65,28 +64,28 @@ class DoublyLinkedLine(TrainLine):
     def add_first(self, data: str) -> None:
         """Insert data as the new first station."""
         new_node = DoublyStation(data)
+        new_node.next = self._head
 
-        if self.is_empty():
-            self._head = new_node
-            self._tail = new_node
-        else:
-            new_node.next = self._head
+        if not self.is_empty():
             self._head.previous = new_node
-            self._head = new_node
 
+        self._head = new_node
         self._size += 1
 
     def add_last(self, data: str) -> None:
-        """Insert data as the new last station."""
+        """Append data as the new last station."""
         new_node = DoublyStation(data)
 
         if self.is_empty():
             self._head = new_node
-            self._tail = new_node
         else:
-            new_node.previous = self._tail
-            self._tail.next = new_node
-            self._tail = new_node
+            current = self._head
+
+            while current.next is not None:
+                current = current.next
+
+            current.next = new_node
+            new_node.previous = current
 
         self._size += 1
 
@@ -99,41 +98,21 @@ class DoublyLinkedLine(TrainLine):
 
         if current is not None:
             new_node = DoublyStation(new_val)
-
             new_node.previous = current
             new_node.next = current.next
 
             if current.next is not None:
                 current.next.previous = new_node
-            else:
-                # Inserting after the last station.
-                self._tail = new_node
 
             current.next = new_node
             self._size += 1
 
+    def search(self, value:str) -> DoublyStation | None: 
+        """search for a station named value. If found return it, otherwise return None """
+        pass
+
+    
+
     def remove(self, value: str) -> bool:
         """Remove the first matching station; return True if removed."""
-        removed = False
-        current = self._head
-
-        while current is not None and current.data != value:
-            current = current.next
-
-        if current is not None:
-            if current.previous is None:
-                # Removing the first station.
-                self._head = current.next
-            else:
-                current.previous.next = current.next
-
-            if current.next is None:
-                # Removing the last station.
-                self._tail = current.previous
-            else:
-                current.next.previous = current.previous
-
-            self._size -= 1
-            removed = True
-
-        return removed
+        pass
