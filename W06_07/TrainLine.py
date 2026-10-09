@@ -48,8 +48,8 @@ class TrainLine(ABC):
         pass
 
     @abstractmethod
-    def search(self, value: str):
-        """Return Station if a station named value exists in the line, None otherwise.
+    def search(self, value: str) -> bool:
+        """Return True if a station named value exists in the line, False otherwise.
 
         Leave the line unchanged.
         """
