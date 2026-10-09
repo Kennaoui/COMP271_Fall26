@@ -28,10 +28,7 @@ class ArrayTrainLine(TrainLine):
         """Insert new_val after the first occurrence of after_val."""
         index = 0
 
-        while (
-            index < len(self._stations)
-            and self._stations[index] != after_val
-        ):
+        while index < len(self._stations) and self._stations[index] != after_val:
             index += 1
 
         if index < len(self._stations):
@@ -42,10 +39,7 @@ class ArrayTrainLine(TrainLine):
         removed = False
         index = 0
 
-        while (
-            index < len(self._stations)
-            and self._stations[index] != value
-        ):
+        while index < len(self._stations) and self._stations[index] != value:
             index += 1
 
         if index < len(self._stations):
