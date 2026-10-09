@@ -115,6 +115,10 @@ class SimplyLinkedLine:
                         current = current.next
     
         return removed 
+
+    def search(self, value:str) -> Station | None: 
+        """search for a station named value. If found return it, otherwise return None """
+        pass
                         
                 
             
