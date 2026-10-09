@@ -91,6 +91,33 @@ class SimplyLinkedLine:
             new_node.next = current.next
             current.next = new_node
             self._size += 1
+
+
+    def remove(self, value:str) -> bool: 
+        """If found, remove the station named value. Return True if found and removed, False otherwise"""
+        removed = False
+        if not self.is_empty():
+            if self._head.data == value:
+                self._head = self._head.next
+                self._size -= 1
+                removed = True
+                
+            else: 
+                previous = self._head
+                current = previous.next
+                while current is not None and not removed: 
+                    if current.data == value:
+                        previous.next = current.next
+                        self._size -= 1
+                        removed = True
+                    else: 
+                        previous = current
+                        current = current.next
+    
+        return removed 
+                        
+                
+            
         
         
 
