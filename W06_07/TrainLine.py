@@ -27,3 +27,7 @@ class TrainLine(ABC):
     @abstractmethod
     def insert_after(self, new_val: str, after_val: str) -> None:
         pass
+
+    @abstractmethod
+    def remove(self, value: str) -> bool:
+        pass
