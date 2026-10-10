@@ -1,4 +1,3 @@
-"""Week 9: the Stack ADT and three implementations (matches the slides)."""
 from abc import ABC, abstractmethod
 
 EMPTY_STACK = "pop or peek on an empty stack"
@@ -109,11 +108,11 @@ class ArrayStack(StackADT):
         return self.__top + 1
 
 
-class _Node:
+class Node:
     """One link: an item and the node below."""
 
     def __init__(self, data: object,
-                 below: "_Node | None") -> None:
+                 below: "Node | None") -> None:
         self.data = data     # the item
         self.next = below    # node underneath
 
@@ -124,14 +123,14 @@ class LinkedStack(StackADT):
 
     def __init__(self) -> None:
         # node holding the top item (None if empty)
-        self.__top: _Node | None = None
+        self.__top: Node | None = None
         # number of items in the stack
         self.__size: int = 0
 
     def push(self, item: object) -> None:
         """Put item on the top of the stack."""
         # new node sits above the old top
-        self.__top = _Node(item, self.__top)
+        self.__top = Node(item, self.__top)
         self.__size += 1
 
     def pop(self) -> object:
