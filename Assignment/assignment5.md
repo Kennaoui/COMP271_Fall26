@@ -1,4 +1,4 @@
-# COMP 271: Assignment 5, Stacks and Queues in a File, and the Ticket Line
+# COMP 271: Assignment 5, Stacks and Queues
 
 ## Context
 
