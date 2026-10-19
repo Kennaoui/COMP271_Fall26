@@ -4,4 +4,4 @@ Write a function `is_balanced(expression: str) -> bool` that uses a **stack** to
 
 Each closing symbol must match the most recent unmatched opening symbol. Return `True` if all symbols are correctly matched and the stack is empty at the end; otherwise, return `False`.
 
-Test your function with `"({[]})"`. In a comment, show the stack contents immediately after processing `"({["`, clearly identifying the top of the stack.
+Test your function with `"({[]})"`. What is the stack contents immediately after processing `"({["`? 
