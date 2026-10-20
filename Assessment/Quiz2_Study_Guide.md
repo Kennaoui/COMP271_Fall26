@@ -3,7 +3,7 @@
 
 ## About the quiz
 
-The quiz covers: Arrays, Linked Lists, ADTs, Stacks and Queues. It is a 45-minute Sakai quiz with two kinds of questions.
+The quiz covers: Arrays, Linked Lists, ADTs, Stacks and Queues. It is a 40 to 45 minutes Sakai quiz with two kinds of questions.
 
 - **Multiple choice:** concepts, vocabulary, and Big-O costs.
 - **Reading code:** explain what a short piece of code does or prints, or find and fix the bug.
