@@ -21,6 +21,11 @@ class TestQueueContract(unittest.TestCase):
         """Example test: a new queue has no items."""
         self.assertTrue(self.q.is_empty())
         self.assertEqual(self.q.size(), 0)
+    def test_queue_after_one_enqueue(self) -> None:
+        """After one enqueue, the queue is not empty and its size is 1."""
+        self.q.enqueue("Test")
+        self.assertFalse(self.q.is_empty())
+        self.assertEqual(self.q.size(), 1)
 
     # TODO: write one small test method for each promise below.
     # 1. After one enqueue, the queue is not empty and its size is 1.
