@@ -12,7 +12,7 @@ Follow the Programmer's Pact. You may use more than one return statement when ne
 
 - No sets or dictionaries.
 - No imports except those in the starter code.
-- `ArrayLookupTable`: no `in` on lists (`for x in ...` is fine), no `index()`, `count()`, or `remove()`.
+- `ArrayLookupTable`: no `in` on lists (`for x in range...` is fine), no `index()`, `count()`, or `remove()`.
 - `LinkedLookupTable`: no Python lists, except to build the list `keys()` returns.
 - Tests call **only** the ADT methods: no private attributes, no `print`.
 
