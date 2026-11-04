@@ -60,6 +60,7 @@ def find_missing_binary_iter(numbers: list[int]) -> int:
 *Hint:* In a complete sorted list, what value should appear at index `i`? How can you use this information to decide which half to search?
 
 **Submission:** `find_missing.py`
+
 ---
 
 ## Exercise 3: Exploring Python's Sorting Algorithm (Reflection) (2 pts)
