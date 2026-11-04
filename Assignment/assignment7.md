@@ -1,6 +1,6 @@
 # COMP 271: Assignment 7, Searching and Sorting Algorithms
 
-## Exercise 1: Modified Bubble Sort (5)
+## Exercise 1: Modified Bubble Sort (5 pts)
 
 In class, we studied an implementation of **Bubble Sort** that compares adjacent elements and moves the largest remaining element to the end of the list after each pass.
 
@@ -16,7 +16,7 @@ Add print statements in your Bubble Sort function to show the state of the list 
 
 ---
 
-## Exercise 2: Find the Missing Number (10)
+## Exercise 2: Find the Missing Number (10 pts)
 
 You are given an **unsorted list of integers** that should contain every integer from `min_val` to `max_val`, except for **exactly one missing number**. There are no duplicates.
 
@@ -59,7 +59,7 @@ def find_missing_binary_iter(numbers: list[int]) -> int:
 
 ---
 
-## Exercise 3: Exploring Python's Sorting Algorithm (Reflection) (5)
+## Exercise 3: Exploring Python's Sorting Algorithm (Reflection) (5 pts)
 
 Python's built-in `.sort()` method uses an algorithm based on **Timsort**.
 
