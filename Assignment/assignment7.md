@@ -1,6 +1,8 @@
 # COMP 271: Assignment 7, Searching and Sorting Algorithms
 
-## Exercise 1: Modified Bubble Sort (5 pts)
+Add a docstring to each function, and include brief pseudocode immediately before its implementation to explain how it works. Follow the Programmer's pact.
+
+## Exercise 1: Modified Bubble Sort (3 pts)
 
 In class, we studied an implementation of **Bubble Sort** that compares adjacent elements and moves the largest remaining element to the end of the list after each pass.
 
@@ -16,7 +18,7 @@ Add print statements in your Bubble Sort function to show the state of the list 
 
 ---
 
-## Exercise 2: Find the Missing Number (10 pts)
+## Exercise 2: Find the Missing Number (5 pts)
 
 You are given an **unsorted list of integers** that should contain every integer from `min_val` to `max_val`, except for **exactly one missing number**. There are no duplicates.
 
@@ -57,9 +59,10 @@ def find_missing_binary_iter(numbers: list[int]) -> int:
 
 *Hint:* In a complete sorted list, what value should appear at index `i`? How can you use this information to decide which half to search?
 
+**Submission:** `find_missing.py`
 ---
 
-## Exercise 3: Exploring Python's Sorting Algorithm (Reflection) (5 pts)
+## Exercise 3: Exploring Python's Sorting Algorithm (Reflection) (2 pts)
 
 Python's built-in `.sort()` method uses an algorithm based on **Timsort**.
 
@@ -78,3 +81,5 @@ Notice the three already sorted sequences included in `numbers`.
 Using a **simplified illustration of Timsort**, show how these runs can be merged step by step to obtain the fully sorted list.
 
 You do not need to reproduce the exact behavior of Python's implementation (such as minimum run lengths or other optimizations). Focus on explaining how Timsort takes advantage of existing ordered sequences.
+
+**Submission:** `timsort.pdf`
