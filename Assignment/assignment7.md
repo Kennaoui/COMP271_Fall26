@@ -1,4 +1,6 @@
-## Exercise 1: Modified Bubble Sort
+# COMP 271: Assignment 7, Searching and Sorting Algorithms
+
+## Exercise 1: Modified Bubble Sort (5)
 
 In class, we studied an implementation of **Bubble Sort** that compares adjacent elements and moves the largest remaining element to the end of the list after each pass.
 
@@ -14,7 +16,7 @@ Add print statements in your Bubble Sort function to show the state of the list 
 
 ---
 
-## Exercise 2: Find the Missing Number
+## Exercise 2: Find the Missing Number (10)
 
 You are given an **unsorted list of integers** that should contain every integer from `min_val` to `max_val`, except for **exactly one missing number**. There are no duplicates.
 
@@ -42,18 +44,22 @@ def find_missing_linear(numbers: list[int],
 Write another function that:
 
 1. Sorts the list using Python's `.sort()` method.
-2. Uses a **modified Binary Search** to find the missing number.
+2. Uses a **modified Binary Search** to find the missing number. Implement two versions: a recursive then an iterative implementation.
 
 ```python
-def find_missing_binary(numbers: list[int],
+def find_missing_binary_rec(numbers: list[int],
                         min_val: int, max_val: int) -> int:
+```
+
+```python
+def find_missing_binary_iter(numbers: list[int]) -> int:
 ```
 
 *Hint:* In a complete sorted list, what value should appear at index `i`? How can you use this information to decide which half to search?
 
 ---
 
-## Exercise 3: Exploring Python's Sorting Algorithm (Reflection)
+## Exercise 3: Exploring Python's Sorting Algorithm (Reflection) (5)
 
 Python's built-in `.sort()` method uses an algorithm based on **Timsort**.
 
