@@ -33,7 +33,7 @@ The ADT is at the end of this assignment. Do not change it.
 - A rejected request leaves the table unchanged.
 - Keys are case-sensitive. A removed key that is added again goes last.
 
-## Part 1: Two implementations
+## Part 1: Two implementations (3.5)
 
 Write both classes in `lookup_table.py`, below the ADT.
 
