@@ -37,9 +37,9 @@ The ADT is at the end of this assignment. Do not change it.
 
 Write both classes in `lookup_table.py`, below the ADT.
 
-**`ArrayLookupTable`** keeps a list of `_Entry` objects, oldest first. Write a private helper `__find(key)` that returns the key's index, or `NOT_FOUND` (`-1`), and build the other methods on it.
+**`ArrayLookupTable`** keeps a list of `_Entry` objects, oldest first. Write a private helper `__find(key)` that returns the key's index, or `NOT_FOUND` (`-1`), and build the other methods on it. (1.5 pt)
 
-**`LinkedLookupTable`** keeps a chain of `_Node` objects: `__head` is the oldest entry, `__tail` the newest, and `__size` the count.
+**`LinkedLookupTable`** keeps a chain of `_Node` objects: `__head` is the oldest entry, `__tail` the newest, and `__size` the count. (2 pt)
 
 ```python
 class _Entry:
@@ -135,7 +135,7 @@ if __name__ == "__main__":
 
 Run it with `python -m unittest -v test_lookup_table`. Then change the import to `LinkedLookupTable` and run it again. Both runs must end with `OK`.
 
-### Required tests
+### Required tests (2.5 pts, 0.5 per test)
 
 Add these five tests. Each one checks one promise from a docstring.
 
@@ -147,7 +147,7 @@ Add these five tests. Each one checks one promise from a docstring.
 | `remove` | After a `KeyError`, the table is unchanged. | `test_failed_remove_leaves_table_unchanged` |
 | `keys` | Oldest entry first. | `test_keys_oldest_first` |
 
-## Part 3: Your own tests
+## Part 3: Your own tests (4 pts, 0.75 per test, 0.25 quality of tests)
 
 Read the docstrings again and find **five more** promises that no test checks yet. Write one test for each, with a one-line docstring quoting the promise, like the example.
 
