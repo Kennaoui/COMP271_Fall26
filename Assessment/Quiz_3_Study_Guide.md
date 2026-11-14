@@ -2,7 +2,7 @@
 
 Dr. Ennaoui
 
-**Monday, Nov 23, remotely on Sakai. 12 questions: multiple choice and short answer. 50 minutes.**
+**Monday, Nov 23, on Sakai. 12 questions: multiple choice and short answer. 50 minutes.**
 
 ## On the quiz
 
