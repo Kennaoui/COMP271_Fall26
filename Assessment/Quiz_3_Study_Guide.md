@@ -1,6 +1,6 @@
 # Quiz 3 Study Guide
 
-Nov 14, 2026 · @Amirak
+Dr. Ennaoui
 
 **Monday, Nov 23, remotely on Sakai. 12 questions: multiple choice and short answer.**
 
