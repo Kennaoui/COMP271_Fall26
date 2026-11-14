@@ -63,5 +63,5 @@ Dr. Ennaoui
 - Earlier material on its own (linked lists, stacks, queues, recursion); it can appear only inside questions on the topics above.
 - Anything after hashing: heaps, priority queues...
 - Selection sort, quicksort, bucket sort.
-- Big Theta and Big Omega (use O( ) only), and formal Big O proofs.
+- Big Theta and Big Omega (use O( ) only).
 - Aspects of these topics not listed here, such as how Python's `dict` stores keys.
