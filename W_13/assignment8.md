@@ -7,7 +7,7 @@
 - You may import `random` and `string` to generate test data.
 - You may use `matplotlib` to generate your graph. Alternatively, you may use Excel, Google Sheets, or another spreadsheet tool.
 - You may add helper methods to the provided `ProbingHashTable` class if needed.
-- Start from the provided `probing_hashing_table.py`. Rename your completed file `assignment8.py`.
+- Start from the provided `probing_hash_table.py`. Rename your completed file `assignment8.py`.
 
 ## Part 1 – Implement Deletion Using Tombstones
 
