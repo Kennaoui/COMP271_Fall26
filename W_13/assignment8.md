@@ -7,7 +7,7 @@
 - You may import `random` and `string` to generate test data.
 - You may use `matplotlib` to generate your graph. Alternatively, you may use Excel, Google Sheets, or another spreadsheet tool.
 - You may add helper methods to the provided `ProbingHashTable` class if needed.
-- Start from the provided `week11_starter_updated.py`. Rename your completed file `week11.py`.
+- Start from the provided `probing_hashing_table.py`. Rename your completed file `assignment8.py`.
 
 ## Part 1 – Implement Deletion Using Tombstones
 
@@ -71,9 +71,9 @@ In a short discussion, answer the following questions:
 
 ## What to Submit
 
-- `week11.py` – Your updated hash table implementation and experimental code.
-- `week11.png` (or PDF/JPG) – Your graph comparing linear and quadratic probing.
-- `week11.txt` – Your brief discussion of the results.
+- `assignment8.py` – Your updated hash table implementation and experimental code.
+- `assignment8.png` (or PDF/JPG) – Your graph comparing linear and quadratic probing.
+- `assignment8.txt` – Your brief discussion of the results.
 
 ---
 
@@ -129,7 +129,7 @@ plt.legend()
 plt.grid(True)
 
 # Save the graph as an image
-plt.savefig("week11.png")
+plt.savefig("assignment8.png")
 
 # Display the graph
 plt.show()
@@ -139,7 +139,7 @@ plt.show()
 
 Replace the sample lists with the load factors and average probe counts obtained from your simulation.
 
-The `plt.savefig("week11.png")` instruction saves the graph as an image that you can submit.
+The `plt.savefig("assignment8.png")` instruction saves the graph as an image that you can submit.
 
 ### Additional resources
 
