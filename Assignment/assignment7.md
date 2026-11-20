@@ -6,13 +6,13 @@ Add a docstring to each function, and include brief pseudocode immediately befor
 
 In class, we studied an implementation of **Bubble Sort** that compares adjacent elements and moves the largest remaining element to the end of the list after each pass.
 
-**Q1.** Modify the Bubble Sort implementation seen in class so that each pass moves the **smallest remaining element to the beginning** of the unsorted portion instead.
+**Q1.** (2 pts) Modify the Bubble Sort implementation seen in class so that each pass moves the **smallest remaining element to the beginning** of the unsorted portion instead. 
 
 Keep the early-exit optimization: the algorithm should stop if a complete pass makes no swaps.
 
 Add print statements in your Bubble Sort function to show the state of the list after each pass until it is sorted.
 
-**Q2.** What are the best-case and worst-case time complexities of your modified implementation? Explain briefly. **Write your answer as comments directly below the function in your `.py` file.**
+**Q2.** (1 pt) What are the best-case and worst-case time complexities of your modified implementation? Explain briefly. **Write your answer as comments directly below the function in your `.py` file.** 
 
 **Submission:** `bubble_sort.py`
 
@@ -32,7 +32,7 @@ max_val = 8
 
 The missing number is `4`.
 
-**Q1. Linear Search**
+**Q1. Linear Search** (2 pts)
 
 Write a function that finds the missing number using a linear search. Do not sort the list.
 
@@ -41,7 +41,7 @@ def find_missing_linear(numbers: list[int],
                         min_val: int, max_val: int) -> int:
 ```
 
-**Q2. Binary Search**
+**Q2. Binary Search** (3 pts)
 
 Write another function that:
 
@@ -69,9 +69,9 @@ Python's built-in `.sort()` method uses an algorithm based on **Timsort**.
 
 Research Timsort and answer the following questions in your own words:
 
-**Q1.** What is Timsort? Which sorting algorithms does it combine ideas from, how does it work, and what is its time complexity?
+**Q1.** (1pt) What is Timsort? Which sorting algorithms does it combine ideas from, how does it work, and what is its time complexity?
 
-**Q2.** Consider the following list:
+**Q2.** (1pt) Consider the following list: ()
 
 ```python
 numbers = [2, 5, 8, 11, 1, 4, 9, 12, 3, 6, 7, 10]
